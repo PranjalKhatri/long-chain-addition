@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module datapath (
     input clk,
     input rst,
@@ -13,6 +14,7 @@ module datapath (
     reg [2:0] write_ptr;        // Pointer to write into reg bank
     reg [2:0] add_ptr;          // Pointer to read for summation
     reg [6:0] temp_sum;
+    reg accumulating;
 
     // Ripple adder instantiation
     wire [6:0] adder_out;
@@ -23,6 +25,11 @@ module datapath (
         .sum(adder_out),
         .cout(cout)
     );
+    
+    always@(negedge load) begin
+        $display("LOAD SIGNAL : %d", load);
+        write_ptr <= write_ptr + 1;
+    end
 
     always @(posedge clk or posedge rst) begin
         if (rst) begin
@@ -31,15 +38,21 @@ module datapath (
             temp_sum <= 0;
             result <= 0;
             done <= 0;
+            accumulating <= 0;
         end else begin
             done <= 0;
             if (load) begin
+                $display("LOAD: WRITE_PTR = %d, VAL = %d", write_ptr, data_in);
                 regs[write_ptr] <= data_in;
                 write_ptr <= write_ptr + 1;
             end
             else if (accumulate) begin
-                temp_sum <= adder_out;
-                add_ptr <= add_ptr + 1;
+                $display("ACCUMULATE: SUM = %d, ADD_PTR = %d, VAL = %d", temp_sum, add_ptr, regs[add_ptr]);
+                accumulating <= !accumulating;
+                if(accumulating) begin 
+                    add_ptr <= add_ptr + 1; 
+                end
+                else temp_sum <= adder_out;
                 if (add_ptr == 3'd7) begin
                     result <= adder_out;
                     done <= 1;
