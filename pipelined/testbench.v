@@ -61,7 +61,17 @@ always @(posedge main_clk ) begin
       g<= 7;
       h<= 8;
     end
-    if(cycle_count >= 10)$finish; // Stop simulation after 20 cycles
+    if(cycle_count == 4)begin
+      a<= 3;
+      b<= 4;
+      c<= 5;
+      d<= 6;
+      e<= 7;
+      f<= 8;
+      g<= 9;
+      h<= 10;
+    end
+    if(cycle_count >= 13)$finish; // Stop simulation after 20 cycles
     #1 $display("cycle %0d | a=%0d b=%0d c=%0d d=%0d e=%0d f=%0d g=%0d h=%0d | result=%0d", 
           cycle_count, a, b, c, d, e, f, g, h, result);
 end

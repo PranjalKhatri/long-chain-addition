@@ -172,8 +172,14 @@ module pipeline_stage_1 #(
    assign fo = f;
    assign go = g;
    assign ho = h;
-   assign r1 = a + b;
-   
+//    assign r1 = a + b;
+   wire cout;
+    ripple_adder_7bit adder (
+        .a(a),
+        .b(b),
+        .sum(r1),
+        .cout(cout)
+    );
    always @(posedge clk) begin
        $display("%0t |stage 1 r1 = %d a %d, b %d",$time, r1, a, b);
    end
@@ -194,8 +200,14 @@ module pipeline_stage_2 #(
    assign fo = f;
    assign go = g;
    assign ho = h;
-   assign r2 = r1 + c;
-   
+//    assign r2 = r1 + c;
+      wire cout;
+    ripple_adder_7bit adder (
+        .a(r1),
+        .b(c),
+        .sum(r2),
+        .cout(cout)
+    );
    always @(posedge clk) begin
        $display("%0t | stage 2 r2 %d r1 %d c %d",$time, r2, r1, c);
    end
@@ -215,7 +227,14 @@ module pipeline_stage_3 #(
    assign fo = f;
    assign go = g;
    assign ho = h;
-   assign r3 = r2 + d;
+//    assign r3 = r2 + d;
+   wire cout;
+    ripple_adder_7bit adder (
+        .a(r2),
+        .b(d),
+        .sum(r3),
+        .cout(cout)
+    );
    
    always @(posedge clk) begin
        $display("%0t | stage 3 r3 %d r2 %d d %d",$time, r3, r2, d);
@@ -235,7 +254,14 @@ module pipeline_stage_4 #(
     assign fo = f;
     assign go = g;
     assign ho = h;
-    assign r4 = r3 + e;
+    // assign r4 = r3 + e;
+       wire cout;
+    ripple_adder_7bit adder (
+        .a(r3),
+        .b(e),
+        .sum(r4),
+        .cout(cout)
+    );
     
     always @(posedge clk) begin
         $display("%0t | stage 4 r4 %d r3 %d e %d",$time, r4, r3, e);
@@ -254,7 +280,14 @@ module pipeline_stage_5 #(
 );
    assign go = g;
    assign ho = h;
-   assign r5 = r4 + f;
+//    assign r5 = r4 + f;
+       wire cout;
+    ripple_adder_7bit adder (
+        .a(r4),
+        .b(f),
+        .sum(r5),
+        .cout(cout)
+    );
    
    always @(posedge clk) begin
        $display("%0t | stage 5 r5 %d r4 %d f %d",$time, r5, r4, f);
@@ -272,7 +305,14 @@ module pipeline_stage_6 #(
     output wire [input_size+2:0] r6
 );
     assign ho = h;
-    assign r6 = r5 + g;
+    // assign r6 = r5 + g;
+           wire cout;
+    ripple_adder_7bit adder (
+        .a(r5),
+        .b(g),
+        .sum(r6),
+        .cout(cout)
+    );
     
     always @(posedge clk) begin
         $display("%0t | stage 6 r6 %d r5 %d g %d",$time, r6, r5, g);
@@ -288,8 +328,14 @@ module pipeline_stage_7 #(
     input wire [input_size-1:0] h,
     output wire [input_size+2:0] r7
 );
-    assign r7 = r6 + h;
-    
+    // assign r7 = r6 + h;
+           wire cout;
+    ripple_adder_7bit adder (
+        .a(r6),
+        .b(h),
+        .sum(r7),
+        .cout(cout)
+    );
     always @(posedge clk) begin
         $display("%0t | stage r7 %d",$time, r7);
     end    
