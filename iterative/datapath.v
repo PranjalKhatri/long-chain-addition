@@ -12,16 +12,16 @@ module datapath (
 
     reg [3:0] regs [0:7];       // Register bank for inputs
     reg [2:0] write_ptr;        // Pointer to write into reg bank
-    reg [2:0] add_ptr;          // Pointer to read for summation
+    reg [3:0] add_ptr;          // Pointer to read for summation
     reg [6:0] temp_sum;
     reg accumulating;
-
     // Ripple adder instantiation
     wire [6:0] adder_out;
     wire cout;
+    reg [6:0] in_2;
     ripple_adder_7bit adder (
         .a(temp_sum),
-        .b({3'b000, regs[add_ptr]}),
+        .b(in_2),
         .sum(adder_out),
         .cout(cout)
     );
@@ -32,33 +32,31 @@ module datapath (
     end
 
     always @(posedge clk or posedge rst) begin
+                $display("ACCUMULATE: SUM = %d, ADD_PTR = %d, VAL = %d,load= %b", temp_sum, add_ptr, regs[add_ptr],load);
         if (rst) begin
             write_ptr <= 0;
             add_ptr <= 0;
             temp_sum <= 0;
             result <= 0;
+            in_2 <= 0;
             done <= 0;
             accumulating <= 0;
         end else begin
-            done <= 0;
             if (load) begin
                 $display("LOAD: WRITE_PTR = %d, VAL = %d", write_ptr, data_in);
                 regs[write_ptr] <= data_in;
-                write_ptr <= write_ptr + 1;
             end
             else if (accumulate) begin
                 $display("ACCUMULATE: SUM = %d, ADD_PTR = %d, VAL = %d", temp_sum, add_ptr, regs[add_ptr]);
-                accumulating <= !accumulating;
-                if(accumulating) begin 
-                    add_ptr <= add_ptr + 1; 
-                end
-                else temp_sum <= adder_out;
-                if (add_ptr == 3'd7) begin
+                if (add_ptr == 4'd8) begin
                     result <= adder_out;
                     done <= 1;
-                    add_ptr <= 0;
-                    write_ptr <= 0;
                     temp_sum <= 0;
+                end
+                else begin
+                    temp_sum <= adder_out;
+                    in_2 <= regs[add_ptr];
+                    add_ptr <= add_ptr + 1;
                 end
             end
         end
