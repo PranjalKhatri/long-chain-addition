@@ -1,0 +1,863 @@
+$date
+	Thu Apr 10 17:03:28 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module top_module_tb $end
+$var wire 7 ! sum [6:0] $end
+$var wire 1 " done $end
+$var reg 1 # clk $end
+$var reg 1 $ dataValid $end
+$var reg 4 % data_in [3:0] $end
+$var reg 1 & rst $end
+$var integer 32 ' i [31:0] $end
+$scope module uut $end
+$var wire 1 # clk $end
+$var wire 1 $ dataValid $end
+$var wire 4 ( data_in [3:0] $end
+$var wire 1 " done $end
+$var wire 1 & rst $end
+$var wire 7 ) sum [6:0] $end
+$var wire 4 * state [3:0] $end
+$var wire 1 + dp_done $end
+$scope module ctrl $end
+$var wire 1 # clk $end
+$var wire 1 $ dataValid $end
+$var wire 1 & rst $end
+$var wire 1 + dp_done $end
+$var parameter 4 , S_DONE $end
+$var parameter 4 - S_IDLE $end
+$var parameter 4 . S_LOAD_1 $end
+$var parameter 4 / S_LOAD_2 $end
+$var parameter 4 0 S_LOAD_3 $end
+$var parameter 4 1 S_RUN $end
+$var parameter 4 2 S_RUN_IS $end
+$var reg 4 3 counter [3:0] $end
+$var reg 4 4 next_state [3:0] $end
+$var reg 4 5 state [3:0] $end
+$upscope $end
+$scope module dp $end
+$var wire 1 # clk $end
+$var wire 4 6 data_in [3:0] $end
+$var wire 1 & rst $end
+$var wire 4 7 state [3:0] $end
+$var wire 7 8 adder_sum [6:0] $end
+$var wire 1 9 adder_cout $end
+$var parameter 4 : S_DONE $end
+$var parameter 4 ; S_IDLE $end
+$var parameter 4 < S_LOAD_1 $end
+$var parameter 4 = S_LOAD_2 $end
+$var parameter 4 > S_LOAD_3 $end
+$var parameter 4 ? S_RUN $end
+$var parameter 4 @ S_RUN_IS $end
+$var reg 1 + dp_done $end
+$var reg 7 A in1 [6:0] $end
+$var reg 7 B in2 [6:0] $end
+$var reg 4 C mem_ptr [3:0] $end
+$var reg 4 D run_ptr [3:0] $end
+$var reg 7 E sum [6:0] $end
+$var reg 7 F temp_sum [6:0] $end
+$scope module adder $end
+$var wire 7 G a [6:0] $end
+$var wire 7 H b [6:0] $end
+$var wire 7 I sum [6:0] $end
+$var wire 1 9 cout $end
+$var wire 7 J carry [6:0] $end
+$scope module fa0 $end
+$var wire 1 K a $end
+$var wire 1 L b $end
+$var wire 1 M cin $end
+$var wire 1 N cout $end
+$var wire 1 O sum $end
+$upscope $end
+$scope module fa1 $end
+$var wire 1 P a $end
+$var wire 1 Q b $end
+$var wire 1 R cin $end
+$var wire 1 S cout $end
+$var wire 1 T sum $end
+$upscope $end
+$scope module fa2 $end
+$var wire 1 U a $end
+$var wire 1 V b $end
+$var wire 1 W cin $end
+$var wire 1 X cout $end
+$var wire 1 Y sum $end
+$upscope $end
+$scope module fa3 $end
+$var wire 1 Z a $end
+$var wire 1 [ b $end
+$var wire 1 \ cin $end
+$var wire 1 ] cout $end
+$var wire 1 ^ sum $end
+$upscope $end
+$scope module fa4 $end
+$var wire 1 _ a $end
+$var wire 1 ` b $end
+$var wire 1 a cin $end
+$var wire 1 b cout $end
+$var wire 1 c sum $end
+$upscope $end
+$scope module fa5 $end
+$var wire 1 d a $end
+$var wire 1 e b $end
+$var wire 1 f cin $end
+$var wire 1 g cout $end
+$var wire 1 h sum $end
+$upscope $end
+$scope module fa6 $end
+$var wire 1 i a $end
+$var wire 1 j b $end
+$var wire 1 k cin $end
+$var wire 1 9 cout $end
+$var wire 1 l sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b101 @
+b100 ?
+b11 >
+b10 =
+b1 <
+b0 ;
+b110 :
+b101 2
+b100 1
+b11 0
+b10 /
+b1 .
+b0 -
+b110 ,
+$end
+#0
+$dumpvars
+0l
+0k
+0j
+0i
+0h
+0g
+0f
+0e
+0d
+0c
+0b
+0a
+0`
+0_
+0^
+0]
+0\
+0[
+0Z
+0Y
+0X
+0W
+0V
+0U
+0T
+0S
+0R
+0Q
+0P
+0O
+0N
+0M
+0L
+0K
+bz000000 J
+b0 I
+b0 H
+b0 G
+b0 F
+b0 E
+b0 D
+b0 C
+b0 B
+b0 A
+09
+b0 8
+b0 7
+b0 6
+b0 5
+b1 4
+b0 3
+0+
+b0 *
+b0 )
+b0 (
+bx '
+1&
+b0 %
+0$
+0#
+0"
+b0 !
+$end
+#10000
+1#
+#20000
+0#
+0&
+#30000
+b1 *
+b1 5
+b1 7
+1#
+#40000
+0#
+#50000
+1#
+#60000
+b10 4
+0#
+b11 %
+b11 (
+b11 6
+1$
+b0 '
+#70000
+b11 4
+b10 *
+b10 5
+b10 7
+1#
+#80000
+0#
+#90000
+b1 4
+b1 3
+b11 *
+b11 5
+b11 7
+b1 C
+0$
+1#
+#100000
+0#
+#110000
+b1 *
+b1 5
+b1 7
+1#
+#120000
+0#
+#130000
+b10 4
+b101 %
+b101 (
+b101 6
+1$
+b1 '
+1#
+#140000
+0#
+#150000
+b11 4
+b10 *
+b10 5
+b10 7
+1#
+#160000
+0#
+#170000
+b1 4
+b10 3
+b11 *
+b11 5
+b11 7
+b10 C
+0$
+1#
+#180000
+0#
+#190000
+b1 *
+b1 5
+b1 7
+1#
+#200000
+0#
+#210000
+b10 4
+b111 %
+b111 (
+b111 6
+1$
+b10 '
+1#
+#220000
+0#
+#230000
+b11 4
+b10 *
+b10 5
+b10 7
+1#
+#240000
+0#
+#250000
+b1 4
+b11 3
+b11 *
+b11 5
+b11 7
+b11 C
+0$
+1#
+#260000
+0#
+#270000
+b1 *
+b1 5
+b1 7
+1#
+#280000
+0#
+#290000
+b10 4
+b10 %
+b10 (
+b10 6
+1$
+b11 '
+1#
+#300000
+0#
+#310000
+b11 4
+b10 *
+b10 5
+b10 7
+1#
+#320000
+0#
+#330000
+b1 4
+b100 3
+b11 *
+b11 5
+b11 7
+b100 C
+0$
+1#
+#340000
+0#
+#350000
+b1 *
+b1 5
+b1 7
+1#
+#360000
+0#
+#370000
+b10 4
+b1001 %
+b1001 (
+b1001 6
+1$
+b100 '
+1#
+#380000
+0#
+#390000
+b11 4
+b10 *
+b10 5
+b10 7
+1#
+#400000
+0#
+#410000
+b1 4
+b101 3
+b11 *
+b11 5
+b11 7
+b101 C
+0$
+1#
+#420000
+0#
+#430000
+b1 *
+b1 5
+b1 7
+1#
+#440000
+0#
+#450000
+b10 4
+b1 %
+b1 (
+b1 6
+1$
+b101 '
+1#
+#460000
+0#
+#470000
+b11 4
+b10 *
+b10 5
+b10 7
+1#
+#480000
+0#
+#490000
+b1 4
+b110 3
+b11 *
+b11 5
+b11 7
+b110 C
+0$
+1#
+#500000
+0#
+#510000
+b1 *
+b1 5
+b1 7
+1#
+#520000
+0#
+#530000
+b10 4
+b1000 %
+b1000 (
+b1000 6
+1$
+b110 '
+1#
+#540000
+0#
+#550000
+b11 4
+b10 *
+b10 5
+b10 7
+1#
+#560000
+0#
+#570000
+b1 4
+b111 3
+b11 *
+b11 5
+b11 7
+b111 C
+0$
+1#
+#580000
+0#
+#590000
+b1 *
+b1 5
+b1 7
+1#
+#600000
+0#
+#610000
+b10 4
+b100 %
+b100 (
+b100 6
+1$
+b111 '
+1#
+#620000
+0#
+#630000
+b11 4
+b10 *
+b10 5
+b10 7
+1#
+#640000
+0#
+#650000
+b1 4
+b1000 3
+b11 *
+b11 5
+b11 7
+b1000 C
+0$
+1#
+#660000
+0#
+#670000
+b100 4
+b1 *
+b1 5
+b1 7
+1#
+#680000
+0#
+#690000
+b100 *
+b100 5
+b100 7
+b101 4
+b110 %
+b110 (
+b110 6
+1$
+b1000 '
+1#
+#700000
+0#
+#710000
+b100 4
+b101 *
+b101 5
+b101 7
+1#
+#720000
+0#
+#730000
+1O
+b11 8
+b11 I
+1T
+b101 4
+1L
+1Q
+b100 *
+b100 5
+b100 7
+b1 D
+b11 B
+b11 H
+0$
+1#
+#740000
+0#
+#750000
+b100 4
+b101 *
+b101 5
+b101 7
+b11 F
+1#
+#760000
+0#
+#770000
+1^
+1\
+1X
+1W
+1S
+0T
+1R
+bz000111 J
+1N
+0Y
+b1000 8
+b1000 I
+0O
+b101 4
+0Q
+1V
+1K
+1P
+b100 *
+b100 5
+b100 7
+b10 D
+b101 B
+b101 H
+b11 A
+b11 G
+b0 %
+b0 (
+b0 6
+1$
+b1001 '
+1#
+#780000
+0#
+#790000
+b100 4
+b101 *
+b101 5
+b101 7
+b1000 F
+1#
+#800000
+0#
+#810000
+0\
+0X
+1T
+0R
+1Y
+0c
+0N
+0W
+0a
+1O
+0S
+b1111 8
+b1111 I
+1^
+bz000000 J
+0]
+b101 4
+1Q
+0K
+0P
+1Z
+b100 *
+b100 5
+b100 7
+b11 D
+b111 B
+b111 H
+b1000 A
+b1000 G
+0$
+1#
+#820000
+0#
+#830000
+b100 4
+b101 *
+b101 5
+b101 7
+b1111 F
+1#
+#840000
+0#
+#850000
+1c
+1a
+1]
+0^
+1\
+1X
+0Y
+1W
+bz001110 J
+1S
+b10001 8
+b10001 I
+0T
+b101 4
+0L
+0V
+1K
+1P
+1U
+b100 *
+b100 5
+b100 7
+b100 D
+b10 B
+b10 H
+b1111 A
+b1111 G
+b1010 '
+1#
+#860000
+0#
+#870000
+b100 4
+b101 *
+b101 5
+b101 7
+b10001 F
+1#
+#880000
+0#
+#890000
+1T
+1R
+0W
+1^
+0h
+1N
+0S
+0\
+0a
+0f
+0O
+0Y
+0X
+0]
+b11010 8
+b11010 I
+1c
+bz000001 J
+0b
+b101 4
+1L
+0Q
+1[
+0P
+0U
+0Z
+1_
+b100 *
+b100 5
+b100 7
+b101 D
+b1001 B
+b1001 H
+b10001 A
+b10001 G
+1#
+#900000
+0#
+#910000
+b100 4
+b101 *
+b101 5
+b101 7
+b11010 F
+1#
+#920000
+0#
+#930000
+0R
+0Y
+0N
+0W
+1O
+b11011 8
+b11011 I
+1T
+bz000000 J
+0S
+b101 4
+0[
+0K
+1P
+1Z
+b100 *
+b100 5
+b100 7
+b110 D
+b1 B
+b1 H
+b11010 A
+b11010 G
+1#
+#940000
+0#
+#950000
+b100 4
+b101 *
+b101 5
+b101 7
+b11011 F
+1#
+#960000
+0#
+#970000
+1h
+1f
+1b
+0c
+1a
+bz011000 J
+1]
+b100011 8
+b100011 I
+0^
+b101 4
+0L
+1[
+1K
+b100 *
+b100 5
+b100 7
+b111 D
+b1000 B
+b1000 H
+b11011 A
+b11011 G
+1#
+#980000
+0#
+#990000
+b100 4
+b101 *
+b101 5
+b101 7
+b100011 F
+1"
+1+
+1#
+#1000000
+0#
+#1010000
+0a
+0l
+0]
+0f
+0k
+1Y
+0c
+0b
+b100111 8
+b100111 I
+1h
+bz000000 J
+0g
+b110 4
+1V
+0[
+0Z
+0_
+1d
+b100 *
+b100 5
+b100 7
+b1000 D
+b100 B
+b100 H
+b100011 A
+b100011 G
+1#
+#1020000
+0#
+#1030000
+b110 *
+b110 5
+b110 7
+b100111 F
+1#
+#1040000
+0#
+#1050000
+b100111 !
+b100111 )
+b100111 E
+1#
+#1060000
+0#
+#1070000
+1#
+#1080000
+0#
+#1090000
+1#
+#1100000
+0#
+#1110000
+1#
+#1120000
+0#
+#1130000
+1#

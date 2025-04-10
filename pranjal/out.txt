@@ -1,0 +1,142 @@
+VCD info: dumpfile top_module_tb.vcd opened for output.
+Time: 0, State: 0, Data In:  0, Sum:   0, Done: 0 dataValid: 0
+State: 0000,nextState: 0001, dataValid: 0 Counter:  0
+Time: 30000, State: 1, Data In:  0, Sum:   0, Done: 0 dataValid: 0
+State: 0001,nextState: 0001, dataValid: 0 Counter:  0
+Time: 60000, State: 1, Data In:  3, Sum:   0, Done: 0 dataValid: 1
+State: 0001,nextState: 0010, dataValid: 1 Counter:  0
+Time: 70000, State: 2, Data In:  3, Sum:   0, Done: 0 dataValid: 1
+loading in memory at  0, data :  3
+State: 0010,nextState: 0011, dataValid: 0 Counter:  0
+Time: 90000, State: 3, Data In:  3, Sum:   0, Done: 0 dataValid: 0
+State: 0011,nextState: 0001, dataValid: 0 Counter:  1
+Time: 110000, State: 1, Data In:  3, Sum:   0, Done: 0 dataValid: 0
+State: 0001,nextState: 0001, dataValid: 1 Counter:  1
+Time: 130000, State: 1, Data In:  5, Sum:   0, Done: 0 dataValid: 1
+State: 0001,nextState: 0010, dataValid: 1 Counter:  1
+Time: 150000, State: 2, Data In:  5, Sum:   0, Done: 0 dataValid: 1
+loading in memory at  1, data :  5
+State: 0010,nextState: 0011, dataValid: 0 Counter:  1
+Time: 170000, State: 3, Data In:  5, Sum:   0, Done: 0 dataValid: 0
+State: 0011,nextState: 0001, dataValid: 0 Counter:  2
+Time: 190000, State: 1, Data In:  5, Sum:   0, Done: 0 dataValid: 0
+State: 0001,nextState: 0001, dataValid: 1 Counter:  2
+Time: 210000, State: 1, Data In:  7, Sum:   0, Done: 0 dataValid: 1
+State: 0001,nextState: 0010, dataValid: 1 Counter:  2
+Time: 230000, State: 2, Data In:  7, Sum:   0, Done: 0 dataValid: 1
+loading in memory at  2, data :  7
+State: 0010,nextState: 0011, dataValid: 0 Counter:  2
+Time: 250000, State: 3, Data In:  7, Sum:   0, Done: 0 dataValid: 0
+State: 0011,nextState: 0001, dataValid: 0 Counter:  3
+Time: 270000, State: 1, Data In:  7, Sum:   0, Done: 0 dataValid: 0
+State: 0001,nextState: 0001, dataValid: 1 Counter:  3
+Time: 290000, State: 1, Data In:  2, Sum:   0, Done: 0 dataValid: 1
+State: 0001,nextState: 0010, dataValid: 1 Counter:  3
+Time: 310000, State: 2, Data In:  2, Sum:   0, Done: 0 dataValid: 1
+loading in memory at  3, data :  2
+State: 0010,nextState: 0011, dataValid: 0 Counter:  3
+Time: 330000, State: 3, Data In:  2, Sum:   0, Done: 0 dataValid: 0
+State: 0011,nextState: 0001, dataValid: 0 Counter:  4
+Time: 350000, State: 1, Data In:  2, Sum:   0, Done: 0 dataValid: 0
+State: 0001,nextState: 0001, dataValid: 1 Counter:  4
+Time: 370000, State: 1, Data In:  9, Sum:   0, Done: 0 dataValid: 1
+State: 0001,nextState: 0010, dataValid: 1 Counter:  4
+Time: 390000, State: 2, Data In:  9, Sum:   0, Done: 0 dataValid: 1
+loading in memory at  4, data :  9
+State: 0010,nextState: 0011, dataValid: 0 Counter:  4
+Time: 410000, State: 3, Data In:  9, Sum:   0, Done: 0 dataValid: 0
+State: 0011,nextState: 0001, dataValid: 0 Counter:  5
+Time: 430000, State: 1, Data In:  9, Sum:   0, Done: 0 dataValid: 0
+State: 0001,nextState: 0001, dataValid: 1 Counter:  5
+Time: 450000, State: 1, Data In:  1, Sum:   0, Done: 0 dataValid: 1
+State: 0001,nextState: 0010, dataValid: 1 Counter:  5
+Time: 470000, State: 2, Data In:  1, Sum:   0, Done: 0 dataValid: 1
+loading in memory at  5, data :  1
+State: 0010,nextState: 0011, dataValid: 0 Counter:  5
+Time: 490000, State: 3, Data In:  1, Sum:   0, Done: 0 dataValid: 0
+State: 0011,nextState: 0001, dataValid: 0 Counter:  6
+Time: 510000, State: 1, Data In:  1, Sum:   0, Done: 0 dataValid: 0
+State: 0001,nextState: 0001, dataValid: 1 Counter:  6
+Time: 530000, State: 1, Data In:  8, Sum:   0, Done: 0 dataValid: 1
+State: 0001,nextState: 0010, dataValid: 1 Counter:  6
+Time: 550000, State: 2, Data In:  8, Sum:   0, Done: 0 dataValid: 1
+loading in memory at  6, data :  8
+State: 0010,nextState: 0011, dataValid: 0 Counter:  6
+Time: 570000, State: 3, Data In:  8, Sum:   0, Done: 0 dataValid: 0
+State: 0011,nextState: 0001, dataValid: 0 Counter:  7
+Time: 590000, State: 1, Data In:  8, Sum:   0, Done: 0 dataValid: 0
+State: 0001,nextState: 0001, dataValid: 1 Counter:  7
+Time: 610000, State: 1, Data In:  4, Sum:   0, Done: 0 dataValid: 1
+State: 0001,nextState: 0010, dataValid: 1 Counter:  7
+Time: 630000, State: 2, Data In:  4, Sum:   0, Done: 0 dataValid: 1
+loading in memory at  7, data :  4
+State: 0010,nextState: 0011, dataValid: 0 Counter:  7
+Time: 650000, State: 3, Data In:  4, Sum:   0, Done: 0 dataValid: 0
+State: 0011,nextState: 0001, dataValid: 0 Counter:  8
+Time: 670000, State: 1, Data In:  4, Sum:   0, Done: 0 dataValid: 0
+State: 0001,nextState: 0100, dataValid: 1 Counter:  8
+Time: 690000, State: 4, Data In:  6, Sum:   0, Done: 0 dataValid: 1
+State: 0100,nextState: 0101, dataValid: 1 Counter:  8
+Time: 710000, State: 5, Data In:  6, Sum:   0, Done: 0 dataValid: 1
+running at  0, data :  3,temp_sum :   0
+in runis
+State: 0101,nextState: 0100, dataValid: 0 Counter:  8
+Time: 730000, State: 4, Data In:  6, Sum:   0, Done: 0 dataValid: 0
+State: 0100,nextState: 0101, dataValid: 0 Counter:  8
+Time: 750000, State: 5, Data In:  6, Sum:   0, Done: 0 dataValid: 0
+running at  1, data :  5,temp_sum :   3
+in runis
+State: 0101,nextState: 0100, dataValid: 1 Counter:  8
+Time: 770000, State: 4, Data In:  0, Sum:   0, Done: 0 dataValid: 1
+State: 0100,nextState: 0101, dataValid: 1 Counter:  8
+Time: 790000, State: 5, Data In:  0, Sum:   0, Done: 0 dataValid: 1
+running at  2, data :  7,temp_sum :   8
+in runis
+State: 0101,nextState: 0100, dataValid: 0 Counter:  8
+Time: 810000, State: 4, Data In:  0, Sum:   0, Done: 0 dataValid: 0
+State: 0100,nextState: 0101, dataValid: 0 Counter:  8
+Time: 830000, State: 5, Data In:  0, Sum:   0, Done: 0 dataValid: 0
+running at  3, data :  2,temp_sum :  15
+in runis
+State: 0101,nextState: 0100, dataValid: 0 Counter:  8
+Time: 850000, State: 4, Data In:  0, Sum:   0, Done: 0 dataValid: 0
+State: 0100,nextState: 0101, dataValid: 0 Counter:  8
+Time: 870000, State: 5, Data In:  0, Sum:   0, Done: 0 dataValid: 0
+running at  4, data :  9,temp_sum :  17
+in runis
+State: 0101,nextState: 0100, dataValid: 0 Counter:  8
+Time: 890000, State: 4, Data In:  0, Sum:   0, Done: 0 dataValid: 0
+State: 0100,nextState: 0101, dataValid: 0 Counter:  8
+Time: 910000, State: 5, Data In:  0, Sum:   0, Done: 0 dataValid: 0
+running at  5, data :  1,temp_sum :  26
+in runis
+State: 0101,nextState: 0100, dataValid: 0 Counter:  8
+Time: 930000, State: 4, Data In:  0, Sum:   0, Done: 0 dataValid: 0
+State: 0100,nextState: 0101, dataValid: 0 Counter:  8
+Time: 950000, State: 5, Data In:  0, Sum:   0, Done: 0 dataValid: 0
+running at  6, data :  8,temp_sum :  27
+in runis
+State: 0101,nextState: 0100, dataValid: 0 Counter:  8
+Time: 970000, State: 4, Data In:  0, Sum:   0, Done: 0 dataValid: 0
+State: 0100,nextState: 0101, dataValid: 0 Counter:  8
+Time: 990000, State: 5, Data In:  0, Sum:   0, Done: 1 dataValid: 0
+running at  7, data :  4,temp_sum :  35
+in runis
+State: 0101,nextState: 0100, dataValid: 0 Counter:  8
+Time: 1010000, State: 4, Data In:  0, Sum:   0, Done: 1 dataValid: 0
+Test completed! Final sum:   0
+State: 0100,nextState: 0110, dataValid: 0 Counter:  8
+Time: 1030000, State: 6, Data In:  0, Sum:   0, Done: 1 dataValid: 0
+running at  8, data :  x,temp_sum :  39
+out  39
+State: 0110,nextState: 0110, dataValid: 0 Counter:  8
+Time: 1050000, State: 6, Data In:  0, Sum:  39, Done: 1 dataValid: 0
+out  39
+State: 0110,nextState: 0110, dataValid: 0 Counter:  8
+out  39
+State: 0110,nextState: 0110, dataValid: 0 Counter:  8
+out  39
+State: 0110,nextState: 0110, dataValid: 0 Counter:  8
+.\testbench.v:74: $finish called at 1130000 (1ps)
+out  39
+State: 0110,nextState: 0110, dataValid: 0 Counter:  8
