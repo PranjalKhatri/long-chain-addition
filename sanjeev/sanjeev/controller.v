@@ -18,22 +18,19 @@ module controller (
     reg [2:0] state, next;
 
     always @(posedge clk or posedge rst) begin
-        if (rst)begin
+        if (rst)
             state <= IDLE;
-            load = 0;
-            accumulate = 0;
-        end
         else
             state <= next;
     end
 
-    always @(posedge clk) begin
+    always @(*) begin
         $display("CLK = %d, RST = %d, DATA_VALID = %d, LOAD = %d, STATE = %d, COUNT = %d, DONE = %d", $time, rst, data_valid, load, state, count, done);
         // load = 0;
         // accumulate = 0;
         case (state)
             IDLE: next = (!rst) ? LOAD_1 : IDLE;
-            LOAD_1: next = (count >= 8) ? ACCUM : (data_valid) ? LOAD_2 : LOAD_1;
+            LOAD_1: next = (count == 8) ? ACCUM : (data_valid) ? LOAD_2 : LOAD_1;
             LOAD_2: next = (data_valid) ? LOAD_2 : LOAD_1;
             ACCUM: next = (done) ? DONE : ACCUM;
             DONE: next = IDLE;
@@ -46,6 +43,7 @@ module controller (
             count <= 0;
             load <= 0;
             accumulate <= 0;
+            // accumulating <= 0;
         end
         else begin
             case (state)
@@ -60,7 +58,6 @@ module controller (
                 end
                 ACCUM: begin
                     accumulate <= 1;
-                    load <= 0;
                     // count <= count + 1;
                 end
                 DONE: count <= 0;
