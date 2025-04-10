@@ -25,11 +25,11 @@ module datapath (
         .sum(adder_out),
         .cout(cout)
     );
-    
-    always@(negedge load) begin
-        $display("LOAD SIGNAL : %d", load);
-        write_ptr <= write_ptr + 1;
-    end
+
+    // always@(negedge load) begin
+    //     $display("LOAD SIGNAL : %d", load);
+    //     write_ptr <= write_ptr + 1;
+    // end
 
     always @(posedge clk or posedge rst) begin
         if (rst) begin
@@ -48,11 +48,15 @@ module datapath (
             end
             else if (accumulate) begin
                 $display("ACCUMULATE: SUM = %d, ADD_PTR = %d, VAL = %d", temp_sum, add_ptr, regs[add_ptr]);
-                accumulating <= !accumulating;
-                if(accumulating) begin 
-                    add_ptr <= add_ptr + 1; 
-                end
-                else temp_sum <= adder_out;
+                // accumulating <= !accumulating;
+                // if(accumulating) begin 
+                //     add_ptr <= add_ptr + 1; 
+                // end
+                // else temp_sum <= adder_out;
+
+                temp_sum <= adder_out;
+                add_ptr <= add_ptr + 1;
+
                 if (add_ptr == 3'd7) begin
                     result <= adder_out;
                     done <= 1;

@@ -48,13 +48,13 @@ module tb_top;
 
         // Feed 8 inputs
         for (i = 0; i < 8; i = i + 1) begin
-            @(negedge clk);
+            @(posedge clk);
             data_in = input_array[i];
             data_valid = 1;
-            repeat(2) @(negedge clk);
-            @(negedge clk);
+            repeat(3) @(posedge clk);
+            // @(posedge clk);
             data_valid = 0;
-            repeat(2) @(negedge clk); // simulate data_valid spacing
+            repeat(2) @(posedge clk); // simulate data_valid spacing
         end
 
         repeat (10) @(posedge clk); // give time for FSM to accumulate
