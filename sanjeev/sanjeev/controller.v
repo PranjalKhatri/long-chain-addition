@@ -24,7 +24,7 @@ module controller (
             state <= next;
     end
 
-    always @(posedge clk) begin
+    always @(*) begin
         $display("CLK = %d, RST = %d, DATA_VALID = %d, LOAD = %d, STATE = %d, COUNT = %d, DONE = %d", $time, rst, data_valid, load, state, count, done);
         // load = 0;
         // accumulate = 0;
@@ -43,6 +43,7 @@ module controller (
             count <= 0;
             load <= 0;
             accumulate <= 0;
+            // accumulating <= 0;
         end
         else begin
             case (state)

@@ -27,8 +27,8 @@ module tb_top;
     // always@(posedge clk) begin
     //     if(data_valid)
     //         $display("CLK = %d, RST = %d, DATA_VALID = %d, DATA_IN = %d", $time, rst, data_valid, data_in);
-    //     // else 
-    //         // $display("CLK = %d, RST = %d, DONE = %d", $time, rst, data_valid, done);
+    //     else 
+    //         $display("CLK = %d, DATA_IN = %d, DONE = %d", $time, data_in, done);
     // end
 
     initial begin
@@ -52,7 +52,7 @@ module tb_top;
             data_in = input_array[i];
             data_valid = 1;
             repeat(2) @(negedge clk);
-            // @(negedge clk);
+            @(negedge clk);
             data_valid = 0;
             repeat(2) @(negedge clk); // simulate data_valid spacing
         end
