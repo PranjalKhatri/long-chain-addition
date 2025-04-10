@@ -18,8 +18,11 @@ module controller (
     reg [2:0] state, next;
 
     always @(posedge clk or posedge rst) begin
-        if (rst)
+        if (rst)begin
             state <= IDLE;
+            load = 0;
+            accumulate = 0;
+        end
         else
             state <= next;
     end
@@ -30,7 +33,7 @@ module controller (
         // accumulate = 0;
         case (state)
             IDLE: next = (!rst) ? LOAD_1 : IDLE;
-            LOAD_1: next = (count == 8) ? ACCUM : (data_valid) ? LOAD_2 : LOAD_1;
+            LOAD_1: next = (count >= 8) ? ACCUM : (data_valid) ? LOAD_2 : LOAD_1;
             LOAD_2: next = (data_valid) ? LOAD_2 : LOAD_1;
             ACCUM: next = (done) ? DONE : ACCUM;
             DONE: next = IDLE;
@@ -57,6 +60,7 @@ module controller (
                 end
                 ACCUM: begin
                     accumulate <= 1;
+                    load <= 0;
                     // count <= count + 1;
                 end
                 DONE: count <= 0;
